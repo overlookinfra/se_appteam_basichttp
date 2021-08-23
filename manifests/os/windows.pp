@@ -12,9 +12,9 @@ class appteam_basichttp::os::windows (
   Boolean $enable_monitoring = false,
 ) {
 
-  if $enable_monitoring {
+  #if $enable_monitoring {
     # future improvements
-  }
+  #}
 
   class{'::profile::app::webserver::iis':
     default_website => false,

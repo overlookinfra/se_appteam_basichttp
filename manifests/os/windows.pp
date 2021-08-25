@@ -23,7 +23,7 @@ class appteam_basichttp::os::windows (
   # configure iis
   iis_application_pool {'sample_website':
     require => [
-      Class['appteam_webserver::iis'],
+      Class['appteam_webserver::middleware::iis'],
     ],
   }
 

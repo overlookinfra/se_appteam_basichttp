@@ -15,7 +15,7 @@ class appteam_basichttp::os::rhel (
     sensu::subscription { 'apache': }
   }
 
-  class {'::profile::app::webserver::apache':
+  class {'appteam_webserver::apache':
     default_vhost  => false,
   }
 

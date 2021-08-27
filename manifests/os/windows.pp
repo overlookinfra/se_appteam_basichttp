@@ -16,7 +16,7 @@ class appteam_basichttp::os::windows (
     # future improvements
   #}
 
-  class{'::profile::app::webserver::iis':
+  class{'::appteam_webserver::middleware::iis':
     default_website => false,
   }
 
@@ -62,7 +62,7 @@ class appteam_basichttp::os::windows (
 
   file { "${doc_root}/index.html":
     ensure  => file,
-    content => epp('profile/app/sample_website.html.epp'),
+    content => epp('appteam_basichttp/sample_website.html.epp'),
   }
 
 }

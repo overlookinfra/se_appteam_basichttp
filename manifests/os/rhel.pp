@@ -7,7 +7,7 @@
 class appteam_basichttp::os::rhel (
   String $doc_root = '/var/www/html',
   Integer $webserver_port = 80,
-  String $website_source_dir = 'puppet:///modules/profile/app/sample_website',
+  String $website_source_dir = 'puppet:///modules/appteam_basichttp/sample_website',
   Boolean $enable_monitoring = false,
 ) {
 
@@ -49,16 +49,16 @@ class appteam_basichttp::os::rhel (
 
   file { "${doc_root}/index.html":
     ensure  => file,
-    content => epp('profile/app/sample_website.html.epp'),
+    content => epp('appteam_basichttp/sample_website.html.epp'),
   }
 
   file { "${doc_root}/403.html":
     ensure  => file,
-    content => epp('profile/app/403.html.epp'),
+    content => epp('appteam_basichttp/403.html.epp'),
   }
 
   file { "${doc_root}/404.html":
     ensure  => file,
-    content => epp('profile/app/404.html.epp'),
+    content => epp('appteam_basichttp/404.html.epp'),
   }
 }

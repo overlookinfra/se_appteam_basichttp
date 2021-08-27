@@ -8,7 +8,7 @@ class appteam_basichttp::os::windows (
   String $doc_root           = 'C:\\inetpub\\wwwroot\\sample_website',
   Integer $webserver_port    = 80,   # change this default value in Hiera common.yaml
   String $apppool            = 'sample_website',
-  String $website_source_dir = 'puppet:///modules/profile/app/sample_website',
+  String $website_source_dir = 'puppet:///modules/appteam_basichttp/sample_website',
   Boolean $enable_monitoring = false,
 ) {
 
